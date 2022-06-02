@@ -1,0 +1,297 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/*Estilos Ventana Crear HMedico*/
+.FPVacunas{
+    background-color:lightskyblue;
+}
+  
+
+
+/*Estilos ventana HM */
+.FHmedico .FondoHmedico {
+    background-color: #F79B4F;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/*Estilos ventana RegistroEmp */
+.FRegistro {
+    background-image: url(../img/FondoDeEdit.jpg);
+}
+
+    .FRegistro .FondoRegistro{
+        background-color: white;
+        margin-top:30px;
+        padding:20px;
+    }
+
+
+
+/*Estilos Login-Cuentas Emplados*/
+.CunetaF {
+    background-image: url(../img/CuentaF.jpg);
+}
+
+    .CunetaF .Cuneta1F{
+        margin-top:20px;
+        background-color: antiquewhite;
+    }
+
+
+/*Estilos de la ventana de Historial Medico*/
+.FHmedico {
+    background-image: url(../img/FondoDeVacuna.jpg)
+}
+
+    .FHmedico thead tr  th {
+        background-color: aliceblue;
+        border: solid 2px;
+    }
+
+    .FHmedico tbody tr  td {
+        background-color: aliceblue;
+        border: solid 2px;
+    }
+
+/*Estilos Ventana RegVacunas*/
+.VacunasF {
+    background-image: url(../img/FondoDeVacuna.jpg);
+}
+
+    .VacunasF .btn{
+        background-color:red;
+        border-inline-start-color:aliceblue;
+           
+    }
+
+    .VacunasF .aguja {
+        padding: 20px;
+        background-color: cadetblue;
+        color: white
+    }
+
+        .VacunasF .aguja .table{
+            color:white;
+        }
+
+        .VacunasF .aguja a {
+            text-align: center;
+        }
+        .VacunasF .aguja th {
+            border: solid 2px;
+        }
+
+/*Estilos Ventana Razas*/
+.RazasF {
+        background-image: url(../img/FondoDeRaza.jpg)
+}
+
+    .RazasF .etiqueta{
+        text-align:center;
+        background-color:antiquewhite;
+        padding:20px;
+    }
+
+        .RazasF .etiqueta th {
+            border: solid 2px;
+        }
+
+        .RazasF .etiqueta img {
+            border-radius: 50%;
+            border: solid 5px black;
+        }
+
+
+/*Estilos Ventana Create-Crear Razas*/
+.ColorRaza_Vacuna {
+    background-color: darkturquoise;
+}
+        .ColorRaza_Vacuna .Marco{
+            border:solid 2px;
+        }
+
+
+/*Estilo Boton Borrar*/
+.BorrarF {
+    background-image: url(../img/FondoDeBor.jpg)
+}
+    .BorrarF .ColorB {
+        background-color: darkviolet;
+        margin-left: 45px;
+        margin-right: 45px;
+        padding: 20px;
+        color:white
+    }
+        .BorrarF .ColorB .Raza_Vacunas h4,dl{
+            border: solid 2px ;
+        }
+
+
+/*Estilos Boton Detalle-Verificar*/
+.VerificarF {
+            background-image: url(../img/FondoDeVer.jpg)
+}   
+    .VerificarF .ColorV{
+        background-color:whitesmoke;
+        margin-left:45px;
+        margin-right:45px;
+        margin-top: 10px;
+        padding:10px;
+
+    }
+
+        .VerificarF .ColorV h1 {
+            background-image: url(../img/FondoDeEdit1.jpg);
+        }
+
+
+
+/*Estilos Boton Editar*/
+.EditarF {
+    background-image: url(../img/FondoDeEdit.jpg)
+}
+
+    .EditarF .ColorE {
+        background-color:white;
+    }
+
+        .EditarF .ColorE .EditarF1{
+            background-image:url(../img/FondoDeEdit1.jpg);
+            text-align:center;
+        }
+
+
+/*Estilos Ventana Perros-Perros en adopcion*/
+.RegistroFondo {
+    background-image: url(../img/imagen1PP.jpg)
+}
+
+    .RegistroFondo .Registrodeperros {
+        text-align: center;
+    }
+
+    .RegistroFondo div{
+        background-color:white;
+    }
+
+    .RegistroFondo #TablaPerro tr th,td{
+        border:2px solid;
+        font-size:13px
+    }
+
+
+/*Estilos Ventana Crear Perros*/
+    .Fondo1 {
+        background-image: url(../img/imagen1FondoNP.jpg);
+    }
+
+    .Fondo1 .colorF1 {
+        background-color: black;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .Fondo1 .colorF1 .container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+/*Estilos de la ventana de Principal (Canina)*/
+        .Fondo2 {
+            background-image: url(../img/imagen1FondoNPER.jpg);
+        }
+
+    .Fondo2 .colorF2{
+        background-color:white;
+    }
+
+
+/*Estilos de la ventana de Secundaria (Beneficios)*/
+.Fondo3{
+    background-image: url(../img/imagen6FondoNAV.jpg);
+}
+
+    .Fondo3 img{
+        width:650px;
+        height:650px;
+    }
+
+    .Fondo3 ul li{
+        text-align:left;
+    }
+
+
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}

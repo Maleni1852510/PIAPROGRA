@@ -1,0 +1,219 @@
+﻿@model IEnumerable<PiaCanina2.Models.dbModels.Perro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!--Perros en adopcion-->
+
+@section scripts{
+        <script>
+        $(document).ready(function () {
+        $('#TablaPerro').DataTable();
+        });
+        </script>
+}
+
+    <body class="RegistroFondo">
+
+
+
+<div class="Registrodeperros">
+
+    <h3>Razas</h3>
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                             1 (Schnauzer)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen1RegistroP.jpg" width="100px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                             2 (Pitbull)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen2RegistroP.jpg" width="200px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                             3 (Chihuahua)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen3RegistroP.jpg" width="225px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+<!--....................................................................................................................................................................................................................................................................-->
+        
+
+
+           <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            4 (Boxer)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen4RegistroP.jpg" width="200px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            5 (Pastor Aleman)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen5RegistroP.jpg" width="250px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                             6 (Perro Salchicha)
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <img src="~/img/imagen6RegistroP.jpg" width="260px" alt="100px" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <h3>Perros en Adopcion</h3>
+</div>
+
+<div>
+<table id="TablaPerro" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RazaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUsuarioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TamañoNavigation)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RazaNavigation.Idraza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuarioNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TamañoNavigation.Descripcion)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+
+
+</body>

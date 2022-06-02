@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PiaCanina2.Models.dbModels.Raza>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body class="RazasF">
+
+<div class="etiqueta">
+
+<h1>Listado de las Razas</h1>
+
+<div>
+    <a asp-action="Create"> <img src="~/img/imagen1RegistroNAV.jpg" width="150px" alt="150px" /> </a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreRaza)
+            </th>
+            <th>
+                <h5> Boton crud</h5>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreRaza)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger"><a asp-action="Delete" asp-route-id="@item.Idraza">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>
+
+</body>

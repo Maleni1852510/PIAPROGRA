@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PiaCanina2.Models.dbModels.PerroVacuna>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section scripts{
+        <script>
+        $(document).ready(function () {
+        $('#TablaPerro').DataTable();
+        });
+        </script>
+}
+
+<body class="FHmedico">
+
+    <div class="FondoHmedico">
+
+    <br />
+<h1>Historial Medico</h1>
+
+<p>
+    <button type="button" class="btn btn-outline-primary"><a asp-action="Create">Crear Nuevo</a></button>
+</p>
+<table id="TablaPerro" class="table">
+    <thead>
+            <th>
+                @Html.DisplayNameFor(model => model.IdperroNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdvacunaNavigation)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdperroNavigation.Idperro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdvacunaNavigation.NombreVacuna)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>
+
+</body>

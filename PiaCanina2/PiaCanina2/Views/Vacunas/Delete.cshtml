@@ -1,0 +1,36 @@
+﻿@model PiaCanina2.Models.dbModels.Vacuna
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<body class="BorrarF">
+
+<div class="ColorB">
+
+<h1>Delete</h1>
+
+<h3>Deseas eliminar el registro de esta vacuna del sistema</h3>
+<div>
+    <h4>Vacuna</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreVacuna)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreVacuna)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idvacuna" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        <button type="button" class="btn btn-warning"><a asp-action="Index">Back to List</a></button>
+    </form>
+</div>
+
+
+</div>
+
+</body>

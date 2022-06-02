@@ -1,0 +1,54 @@
+﻿@model PiaCanina2.Models.dbModels.Vacuna
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body class="ColorRaza_Vacuna">
+
+<h1>Registro de vacunas</h1>
+
+<div class="Marco">
+
+<h4>Vacuna</h4>
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+
+            <div class="row">
+
+            <div class="form-group">
+                <label asp-for="NombreVacuna" class="control-label"></label>
+                <input asp-for="NombreVacuna" class="form-control" />
+                <span asp-validation-for="NombreVacuna" class="text-danger"></span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <button type="button" class="btn btn-warning"><a asp-action="Index">Back to List</a></button>
+            </div>
+
+            </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</div>
+
+
+</body>

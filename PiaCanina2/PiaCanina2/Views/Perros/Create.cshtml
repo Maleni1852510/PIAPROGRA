@@ -1,0 +1,80 @@
+﻿@model PiaCanina2.Models.dbModels.Perro
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body class="Fondo1">
+
+<div class="colorF1">
+
+<h1>Registrar Perros</h1>
+<hr />
+<div class="row">
+      <form method="post" asp-action="Create" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-4">
+                <label asp-for="Raza" class="control-label"></label>
+                <select asp-for="Raza" class ="form-control" asp-items="ViewBag.Raza"></select>
+                </div>
+                 <div class="form-group col-sm-12 col-md-4">
+                <label asp-for="Edad" class="control-label"></label>
+                <input asp-for="Edad" class="form-control" />
+                <span asp-validation-for="Edad" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-12 col-md-4">
+                <label asp-for="Peso" class="control-label"></label>
+                <input asp-for="Peso" class="form-control" />
+                <span asp-validation-for="Peso" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="form-group">
+                <label for="formFile" class="form-label" asp-for="Foto" class="control-label"></label>
+                <input class="form-control" type="file" id="formFile" asp-for="Foto" class="form-control" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Tamaño" class="control-label"></label>
+                <select asp-for="Tamaño" class ="form-control" asp-items="ViewBag.Tamaño"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Idusuario" class="control-label"></label>
+                <select asp-for="Idusuario" class ="form-control" asp-items="ViewBag.Idusuario"></select>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Sexo" /> @Html.DisplayNameFor(model => model.Sexo)
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-6">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <button type="button" class="btn btn-warning"><a asp-action="Index">Lista de Perro</a></button>
+                </div>
+            </div>
+
+        </div>
+      </form>
+</div>
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</body>

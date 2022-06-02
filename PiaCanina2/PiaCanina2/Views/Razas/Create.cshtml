@@ -1,0 +1,49 @@
+﻿@model PiaCanina2.Models.dbModels.Raza
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body class="ColorRaza_Vacuna">
+
+<h1>Registrar </h1>
+
+<div class="Marco">
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+
+            <div class="row">
+
+            <div class="form-group col-12">
+                <label asp-for="NombreRaza" class="control-label"></label>
+                <input asp-for="NombreRaza" class="form-control" />
+                <span asp-validation-for="NombreRaza" class="text-danger"></span>
+            </div>
+
+            </div>
+
+            <div class="row">
+
+            <div class="form-group col-sm-12 col-md-6">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <button type="button" class="btn btn-warning"><a asp-action="Index">Back to List</a></button>
+            </div>
+
+            </div>
+
+            </div>
+        </form>
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</body>

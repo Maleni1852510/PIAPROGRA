@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PiaCanina2.Models.dbModels.Vacuna>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body class="VacunasF">
+
+<div class="aguja">
+
+<h1>Listado de las vacunas</h1>
+
+<p>
+    <a asp-action="Create"><img src="~/img/imagen1RegistroNAV.jpg" width="150px" alt="150px" /></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreVacuna)
+            </th>
+            <th>
+                <h5>Boton de crud </h5>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreVacuna)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger"> <a asp-action="Delete" asp-route-id="@item.Idvacuna">Delete</a> </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="etiqueta">
+
+</body>

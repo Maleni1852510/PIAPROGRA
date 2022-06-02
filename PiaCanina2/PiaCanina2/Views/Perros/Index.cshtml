@@ -1,0 +1,96 @@
+﻿@model IEnumerable<PiaCanina2.Models.dbModels.Perro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section scripts{
+        <script>
+        $(document).ready(function () {
+        $('#TablaPerro').DataTable();
+        });
+        </script>
+}
+
+
+    <body class="RegistroFondo">
+
+    <div class="Registrodeperros">
+        <h1>Listado de perrro</h1>
+        <a asp-action="Create"><img src="~/img/imagen1RegistroNAV.jpg" width="100px" alt="100px" /></a>
+    </div>
+
+    <div >
+    <table id="TablaPerro" class="table">
+        <thead>
+            <tr>
+                <th>
+                            @Html.DisplayNameFor(model => model.Edad)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.Peso)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.Foto)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.RazaNavigation)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.IdUsuarioNavigation)
+                </th>
+                <th>
+                            @Html.DisplayNameFor(model => model.TamañoNavigation)
+                </th>
+                <th>
+                    <h5>Botones crud</h5>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+                    @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                            @Html.DisplayFor(modelItem => item.Edad)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.Peso)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.Foto)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.RazaNavigation.Idraza)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.IdUsuarioNavigation.Id)
+                </td>
+                <td>
+                            @Html.DisplayFor(modelItem => item.TamañoNavigation.Descripcion)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary"><a asp-action="Edit" asp-route-id="@item.Idperro">Edit</a></button>
+                    <button type="button" class="btn btn-outline-success"><a asp-action="Details" asp-route-id="@item.Idperro">Details</a></button>
+                    <button type="button" class="btn btn-outline-danger"><a asp-action="Delete" asp-route-id="@item.Idperro">Delete</a></button>
+                </td>
+            </tr>
+                }
+    </tbody>
+</table>
+
+</div>
+
+</body>
